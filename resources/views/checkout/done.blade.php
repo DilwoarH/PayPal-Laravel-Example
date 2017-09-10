@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>Payment Completed</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -14,6 +14,7 @@
                 margin: 0;
                 padding: 0;
                 width: 100%;
+                color: #B0BEC5;
                 display: table;
                 font-weight: 100;
                 font-family: 'Lato';
@@ -31,15 +32,18 @@
             }
 
             .title {
-                font-size: 96px;
+                font-size: 72px;
+                margin-bottom: 40px;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">PayPal Laravel Test</div>
-                <a href="/checkout"><img src="https://www.braintreepayments.com/images/features/paypal/paypal-button@2x-69b78052.png" alt="" width="300px"></a>
+                <div class="title">Payment Completed</div>
+                <p>
+                    Total Paid = &pound;{{ $payment->transactions[0]->amount->total }}
+                </p>
             </div>
         </div>
     </body>

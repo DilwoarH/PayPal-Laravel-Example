@@ -83,9 +83,9 @@ class PayPalTest extends Controller
         $executePayment = $payment->execute($paymentExecution, $this->_apiContext);
     
         // Clear the shopping cart, write to database, send notifications, etc.
-    
+
         // Thank the user for the purchase
-        return view('checkout.done');
+        return view('checkout.done', compact('payment'));
     }
     
     public function getCancel()
