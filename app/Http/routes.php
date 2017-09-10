@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PayPalTest@index');
+Route::get('/checkout', 'PayPalTest@getCheckout');
+Route::get('/done', 'PayPalTest@getDone');
+Route::get('/cancel', 'PayPalTest@getCancel');
